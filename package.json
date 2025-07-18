@@ -1,0 +1,91 @@
+{
+  "name": "troll-command",
+  "version": "1.0.2",
+  "description": "Команда для троллинга кого-то, втф.",
+  "main": "index.js",
+  "author": "I_Sahorok",
+  "botpanel": {
+    "categories": [
+      "Команды",
+      "Автоматизация"
+    ],
+    "icon": "slice",
+	"supportedHosts": [
+      "mc.mineblaze.net",
+      "mc.masedworld.net",
+      "mc.cheatmine.net",
+      "mc.dexland.org"
+    ],
+    "dependencies": {
+      "parser-keksik": "*"
+    },
+     "settings": {
+      "trollMessages": {
+        "type": "string[]",
+        "label": "Сообщения для троллинга",
+        "description": "Список сообщений для отправки.",
+        "default": [
+          "Как дела бомж?",
+          "Ты мне должен 100 рублей",
+          "Глотни хуйца.",
+          "Передаю привет твоей матери"
+        ]
+      },
+	  "sendNotificationsToPM": {
+        "type": "boolean",
+        "label": "Уведомления в ЛС",
+        "description": "Отправлять сообщения о начале/остановке/завершении троллинга и т.д. в ЛС.",
+        "default": true
+      },
+      "startMessage": {
+        "type": "string",
+        "label": "Сообщение о начале (в ЛС)",
+        "description": "Используйте {player} для подстановки ника цели.",
+        "default": "Начинаю троллинг {player}..."
+      },
+	  "finishMessage": {
+        "type": "string",
+        "label": "Сообщение о завершении (в ЛС)",
+        "description": "Используйте {player}.",
+        "default": "Троллинг {player} закончился."
+      },
+      "stopMessage": {
+        "type": "string",
+        "label": "Сообщение об остановке (в ЛС)",
+        "default": "Троллинг остановлен."
+      },
+      "enableRandomOrder": {
+        "type": "boolean",
+        "label": "Случайный порядок сообщений",
+        "default": true
+      },
+      "minDelayMs": {
+        "type": "number",
+        "label": "Мин. задержка (мс)",
+        "default": 3100
+      },
+      "maxDelayMs": {
+        "type": "number",
+        "label": "Макс. задержка (мс)",
+        "default": 3300
+      },
+	   "trollingSamePlayerMessage": {
+        "type": "string",
+        "label": "Сообщение 'Уже троллится этот игрок'",
+        "description": "Когда пытаются запустить троллинг на уже троллящегося игрока. Используйте {player}.",
+        "default": "Я и так троллю {player}!"
+      },
+      "alreadyTrollingMessage": {
+        "type": "string",
+        "label": "Сообщение 'Уже выполняется'",
+        "description": "Используйте {player}.",
+        "default": "Я уже занят троллингом {player}. Сначала остановите текущий."
+      },
+      "notTrollingMessage": {
+        "type": "string",
+        "label": "Сообщение 'Не выполняется'",
+        "default": "Сейчас никто не подвергается троллингу."
+      }
+    }
+  }
+}
